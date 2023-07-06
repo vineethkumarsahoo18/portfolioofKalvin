@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio Website </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/75aede2885.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <div id="header">
+      <div class="container">
+        <nav>
+          <img src="logo.jpg" class="logo">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>           
+            <li><a href="#">Contact </a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>WEB DESIGNER</p>
+          <h1>Hi, I am <span>Kalvin</span><br>Paul from India</h1>
+        </div>
+      </div>
+
+     </div>
+     <!--------about------------->
+     <div id ="about">
+      <div class = "container">
+        <div class= "row">
+          <div class="about-col-1">
+            <img src="kimage.jpg">
+          
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>Myself Kalvin from Vizag pursuing my btech from AU 
+              (2021-2025)
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Languages</span><br>C    C++   Basic concept of Java </li>
+                <li><span>Front End like</span><br>HTMl   CSS JS </li>
+                <li><span>database</span><br>My Sql  / Oracle </li>
+                </ul>
+            </div>
+            <p class="tab-links active-link " onclick="opentab('experience')">Experience</p>
+              <div class="tab-contents active-tab" id="experience">
+              <ul>
+                <li><span>Current</span><br> Doing a internship on Full Stack from Edumoon </li>
+                </ul>
+              </div>
+              <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+              <div class="tab-contents active-tab"  id="education">
+                <ul>
+                  <li><span>2018</span><br>Completed High Schooling from Vijayam School </li>
+                  <li><span>2020</span><br>Completed my Intermediate from Resonance</li>
+                  <li><span>2021-2025</span><br>pursuing btech from AU</li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+      </div>
+     </div>
+     <!----------------->
+     <div id="=Contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left"></div>
+          <h4 id="van">contact me</h4><br>
+         
+         <div id="revi"> <i class="fa-thin fa-envelope"></i>kalvinpaul123@gmail.com</p></div>
+          <p><i class="fa-solid fa-phone"></i>9989733481</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/kalvin.paul.94"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/kalvin_9704/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/pilli-kalvin-paul-abishai-84b294273/"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="contact-right"></div>
+        </div>
+      </div>     </div>
+<script>  
+     var tablinks = document.getElementsByClassName("tab-links");
+     var tabcontents = document.getElementsByClassName("tab-contents");
+    
+     function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classlist.remove("active-link");
+      }
+      
+      for(tabcontent of tabcontents){
+        tabcontent.classlist.remove("active-tab");
+      }
+      event.currentTarget.classlist.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab")
+     }
+     </script>
+</body>
+</html>
